@@ -1,8 +1,7 @@
-package egovframework.let.hospital.entity;
+package egovframework.let.hospital.domain;
 
 import egovframework.com.cmm.entity.BaseEntity;
 import lombok.*;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 

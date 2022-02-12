@@ -1,4 +1,4 @@
-package egovframework.let.hospital.entity;
+package egovframework.let.hospital.domain;
 
 import lombok.*;
 import org.locationtech.jts.geom.Point;
