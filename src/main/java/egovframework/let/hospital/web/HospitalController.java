@@ -1,5 +1,6 @@
 package egovframework.let.hospital.web;
 
+import egovframework.let.hospital.HospitalDTO;
 import egovframework.let.hospital.domain.HospitalEntity;
 import egovframework.let.hospital.service.HospitalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,9 @@ public class HospitalController {
      * 병원 저장
      * */
     @PostMapping("save")
-    public HospitalEntity save(HospitalEntity hospitalEntity) {
-        return hospitalService.save(hospitalEntity);
+    public HospitalEntity save(HospitalDTO hospitalDTO)
+    {
+        return hospitalService.save(hospitalDTO);
     }
 
     /**

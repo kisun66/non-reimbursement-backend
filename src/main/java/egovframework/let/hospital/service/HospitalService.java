@@ -1,5 +1,6 @@
 package egovframework.let.hospital.service;
 
+import egovframework.let.hospital.HospitalDTO;
 import egovframework.let.hospital.domain.HospitalEntity;
 import egovframework.let.hospital.repository.HospitalRepository;
 import org.egovframe.rte.fdl.cmmn.EgovAbstractServiceImpl;
@@ -20,7 +21,11 @@ public class HospitalService extends EgovAbstractServiceImpl {
     /**
      * 저장
      * */
-    public HospitalEntity save(HospitalEntity hospitalEntity) {
+    public HospitalEntity save(HospitalDTO hospitalDTO) {
+        HospitalEntity hospitalEntity = HospitalEntity.builder()
+                        .hospitalName(hospitalDTO.getHospitalName())
+                        .hospitalInfo(hospitalDTO.getHospitalInfo())
+                        .build();
         hospitalRepository.save(hospitalEntity);
         return hospitalEntity;
     }
