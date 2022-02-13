@@ -29,7 +29,7 @@ public class HospitalInfoController {
             @RequestParam(value = "xPos") double xPos,
             @RequestParam(value = "yPos") double yPos,
             @RequestParam(value = "distance") int distance) {
-        return hospitalInfoService.getNearByHospitals(xPos, yPos, distance);
+        return hospitalInfoService.getNearByHospitals(yPos, xPos, distance);
     }
 
 }
